@@ -1,0 +1,49 @@
+package com.example.appteste
+
+import android.content.Intent
+import android.graphics.Color
+import androidx.appcompat.app.AppCompatActivity
+import android.os.Bundle
+import android.service.autofill.OnClickAction
+import android.view.View
+import android.widget.EditText
+import kotlinx.android.synthetic.main.activity_main.*
+
+const val EXTRA_MESSAGE = "com.example.appteste.MESSAGE"
+class MainActivity : AppCompatActivity() {
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main)
+
+        val btCalcular = buttonCalcular
+        val resultado = textViewResultado
+
+        btCalcular.setOnClickListener{
+            val nota1 = editTextNotaUm.text.toString().toDouble()
+            val nota2 = editTextNotaDois.text.toString().toDouble()
+            val media = (nota1+nota2)/2
+
+            if(media >= 6){
+                textViewResultado.setText("Aprovado arrombado!" +"\n" + media)
+                textViewResultado.setTextColor(Color.GREEN)
+            }else{
+                textViewResultado.setText("Reprovado filha da puta!" +"\n" + media)
+                textViewResultado.setTextColor(Color.RED)
+            }
+
+
+
+        }
+
+    }
+
+
+    fun sendMessage(view: View){
+        //val editText = findViewById<EditText>(R.id.editText)
+        val message = "Gomo chupa cu de goianinha"
+        val intent = Intent(this, DisplayMessageActivity::class.java).apply {
+            putExtra(EXTRA_MESSAGE, message)
+        }
+        startActivity(intent)
+    }
+}
