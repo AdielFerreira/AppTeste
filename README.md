@@ -1,4 +1,4 @@
 # AppTeste
-## AppTeste on android studio
+ AppTeste on android studio
 
-### Aplicativo inicial de calculo de media. Feito em Kotlin para desenvolvimento de aplicações mobile.
+ Aplicativo inicial de calculo de media. Feito em Kotlin para desenvolvimento de aplicações mobile.
