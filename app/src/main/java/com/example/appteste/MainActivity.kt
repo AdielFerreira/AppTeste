@@ -25,10 +25,10 @@ class MainActivity : AppCompatActivity() {
             val media = (nota1+nota2)/2
 
             if(media >= 6){
-                textViewResultado.setText("Aprovado arrombado!" +"\n" + media)
+                textViewResultado.setText("Você foi aprovado!"+"\n"+"Média: "+media+"\n"+"Parabéns :D")
                 textViewResultado.setTextColor(Color.GREEN)
             }else{
-                textViewResultado.setText("Reprovado filha da puta!" +"\n" + media)
+                textViewResultado.setText("Você foi reprovado!"+"\n"+"Média: "+media+"\n"+"Que pena :(")
                 textViewResultado.setTextColor(Color.RED)
             }
         }
