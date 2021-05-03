@@ -14,6 +14,9 @@ const val EXTRA_MESSAGE = "com.example.appteste.MESSAGE"
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+        setTheme(R.style.DemoTheme)
+        Thread.sleep(1000)
         setContentView(R.layout.activity_main)
 
         val btCalcular = buttonCalcular
