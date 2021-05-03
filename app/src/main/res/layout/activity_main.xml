@@ -9,6 +9,26 @@
     tools:context=".MainActivity">
 
     <EditText
+        android:id="@+id/editTextNotaUm"
+        android:layout_width="0dp"
+        android:layout_height="51dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginRight="24dp"
+        android:layout_marginBottom="8dp"
+        android:background="#652F4F4F"
+        android:ems="10"
+        android:inputType="number|numberDecimal"
+        android:lineSpacingExtra="36sp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@+id/textViewNotaDois"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewNotaUm" />
+
+    <EditText
         android:id="@+id/editTextNotaDois"
         android:layout_width="0dp"
         android:layout_height="51dp"
@@ -17,7 +37,7 @@
         android:layout_marginTop="8dp"
         android:layout_marginEnd="24dp"
         android:layout_marginRight="24dp"
-        android:background="#D3C6EC"
+        android:background="#652F4F4F"
         android:ems="10"
         android:inputType="number|numberDecimal"
         android:lineSpacingExtra="8sp"
@@ -27,24 +47,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textViewNotaDois"
         app:layout_constraintVertical_bias="0.00999999" />
-
-    <TextView
-        android:id="@+id/textViewNotaDois"
-        android:layout_width="146dp"
-        android:layout_height="25dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginLeft="24dp"
-        android:layout_marginTop="32dp"
-        android:layout_marginBottom="8dp"
-        android:contentDescription="@string/app_name"
-        android:text="Nota 2:"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.06"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.271" />
 
     <TextView
         android:id="@+id/textViewNotaUm"
@@ -64,6 +66,24 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.162" />
 
+    <TextView
+        android:id="@+id/textViewNotaDois"
+        android:layout_width="146dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginBottom="8dp"
+        android:contentDescription="@string/app_name"
+        android:text="Nota 2:"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.06"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.271" />
+
     <Button
         android:id="@+id/buttonCalcular"
         android:layout_width="402dp"
@@ -72,33 +92,17 @@
         android:onClick="sendMessage"
         android:text="@string/Calcular"
         android:textSize="24sp"
+        app:backgroundTint="#2F4F4F"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.38"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <EditText
-        android:id="@+id/editTextNotaUm"
-        android:layout_width="0dp"
-        android:layout_height="51dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginLeft="24dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="24dp"
-        android:layout_marginRight="24dp"
-        android:layout_marginBottom="8dp"
-        android:background="#D3C6EC"
-        android:ems="10"
-        android:inputType="number|numberDecimal"
-        android:lineSpacingExtra="36sp"
-        android:visibility="visible"
-        app:layout_constraintBottom_toTopOf="@+id/textViewNotaDois"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewNotaUm" />
+
 
     <TextView
         android:id="@+id/textViewNotaFinalTitulo"
+
         android:layout_width="380dp"
         android:layout_height="51dp"
         android:layout_marginStart="32dp"
@@ -109,13 +113,15 @@
         android:layout_marginBottom="59dp"
         android:text="App de Calculo de Nota Final"
         android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-        android:textStyle="bold|italic"
+        android:fontFamily="@font/sketch"
+        android:textSize="27dp"
         app:layout_constraintBottom_toTopOf="@+id/textViewNotaUm"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
+
         android:id="@+id/textViewResultado"
         android:layout_width="228dp"
         android:layout_height="228dp"
@@ -133,6 +139,20 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextNotaDois"
-        app:layout_constraintVertical_bias="0.622" />
+        app:layout_constraintVertical_bias="0.614" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="230dp"
+        android:layout_height="177dp"
+        android:layout_marginTop="110dp"
+        android:layout_marginBottom="99dp"
+        app:layout_constraintBottom_toTopOf="@+id/buttonCalcular"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.486"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextNotaDois"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/quadronegro" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

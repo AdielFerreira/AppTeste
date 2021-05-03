@@ -2,6 +2,7 @@ package com.example.appteste
 
 import android.content.Intent
 import android.graphics.Color
+import android.graphics.Typeface
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.service.autofill.OnClickAction
@@ -30,9 +31,6 @@ class MainActivity : AppCompatActivity() {
                 textViewResultado.setText("Reprovado filha da puta!" +"\n" + media)
                 textViewResultado.setTextColor(Color.RED)
             }
-
-
-
         }
 
     }
